@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="/static/style.css">
-    <script src="/static/script.js"></script>
 </head>
 
 <body>
@@ -94,10 +93,10 @@
                     <h2>Contact Me</h2>
                 </div>
                 <div class="contact">
-                    <form>
-                        <input type="text" placeholder="Name">
-                        <textarea placeholder="Description"></textarea>
-                        <button>Send</button>
+                    <form id="kritik" method="POST">
+                        <input type="text" name="name" placeholder="Name">
+                        <textarea name="description" placeholder="Description"></textarea>
+                        <button type="submit">Send</button>
                     </form>
                 </div>
             </div>
@@ -107,6 +106,8 @@
     <footer>
         <p>Copy &copy; by KangReal || 2025</p>
     </footer>
+
+    <script src="/static/script.js"></script>
 </body>
 
 </html>

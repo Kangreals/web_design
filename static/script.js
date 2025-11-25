@@ -147,3 +147,23 @@ function pageForm() {
 
 window.addEventListener('scroll', pageForm)
 pageForm()
+
+// form kritik
+document.getElementById('kritik').addEventListener("submit", function(e) {
+    e.preventDefault(); //mencegah reload
+
+    const formData = new FormData(this);
+
+    fetch("/submit", {
+        method: "POST",
+        body: formData
+    })
+
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+    })
+    .catch(err => {
+        alert("Terjadi Error!");
+    })
+})
